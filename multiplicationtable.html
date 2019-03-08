@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MULTIPLICATION TABLE</title>
+</head>
+<body>
+	<center><h1>MULTIPLICATION TABLE</h1>
+		 <label>COLUMN:&nbsp;</label><input type="number" id="col"><br><br>
+		<label>ROW:&nbsp; </label><input type="number" id="row"><br>
+		<button type="button" onclick="perform()"> SHOW </button><br/><br/>
+		<div id="calc" style="background-color:#ae0050; border-style: groove; border: 20px solid orange; border-radius: 14px; color: white; display: none;"></div>
+	</center>
+	<script type="text/javascript">
+		function perform(){
+			var task="";
+			col.focus();
+			if(col.value!="" && row.value!=""){ if (col.value!=0 &&  row.value!=0){ document.getElementById('calc').style.display="block";
+			task+= "<table border='1'><caption><b>MULTIPLICATION TABLE</b></caption>";	
+			 task+= "<tr>";                                                                                             
+				 for (var i=1; i<= col.value; i++) {
+				 task+="<td>";
+				 task+="<b>Table</b>"+" "+i+"<br>";
+				 		for (var j=1; j<= row.value; j++) {
+				 		    task+= i +"x" +j +" = "+ i*j  +"<br>"; }
+				 	task+="</td>";}		
+			task+="</tr></table>";				
+			document.getElementById('calc').innerHTML=task; }
+		else{document.getElementById('calc').style.display="none";
+				alert("Please enter a valid value in the boxes above to perform your operation");}} 
+			else{document.getElementById('calc').style.display="none";
+				alert("Please enter a valid value in the boxes above to perform your operation");}}
+	</script>
+</body>
+</html>
