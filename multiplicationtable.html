@@ -4,13 +4,14 @@
 	<title>MULTIPLICATION TABLE</title>
 </head>
 <body>
-	<center><h1>MULTIPLICATION TABLE</h1>
+	<center><h1 style="background-color: lightblue;">MULTIPLICATION TABLE</h1>
 		 <label>COLUMN:&nbsp;</label><input type="number" id="col"><br><br>
 		<label>ROW:&nbsp; </label><input type="number" id="row"><br>
 		<button type="button" onclick="perform()"> SHOW </button><br/><br/>
 		<div id="calc" style="background-color:#ae0050; border-style: groove; border: 20px solid orange; border-radius: 14px; color: white; display: none;"></div>
 	</center>
 	<script type="text/javascript">
+			col.focus();
 		function perform(){
 			var task="";
 			col.focus();
